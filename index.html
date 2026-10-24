@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en" class="journey-locked">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fbf5f0">
+<meta name="description" content="A little graduation celebration for the final-year students of the Department of Islamic Learning, University of Karachi.">
+<title>A Little Graduation Surprise</title>
+<style>
+:root{--paper:#fbf5f0;--ink:#3e3340;--muted:#776977;--rose:#e6b6c1;--rose-deep:#b66e83;--sage:#9aaf9b;--green:#526d5a;--lilac:#c9bbdc;--gold:#c8a66a;--serif:"Iowan Old Style","Palatino Linotype","Book Antiqua",Georgia,serif;--sans:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-snap-type:y proximity;background:var(--paper)}body{margin:0;color:var(--ink);font-family:var(--sans);background:var(--paper);overflow-x:hidden}button{font:inherit}button:focus-visible{outline:3px solid var(--rose-deep);outline-offset:5px}::selection{background:#f0d8df;color:#302732}
+/* Mandatory opening gate: the page cannot scroll before the surprise button is clicked. */
+html.journey-locked,html.journey-locked body{height:100%;overflow:hidden!important;overscroll-behavior:none;touch-action:pan-x}html.journey-locked body{position:fixed;inset:0;width:100%}
+.progress-track{position:fixed;z-index:80;inset:0 0 auto;height:3px;background:#4137410d}.progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--rose),var(--gold),var(--sage));transition:width .18s ease-out}.corner-note{position:fixed;z-index:70;top:max(17px,env(safe-area-inset-top));left:18px;display:flex;align-items:center;gap:8px;color:#3f343eb8;font-size:10px;letter-spacing:.15em;text-transform:uppercase;pointer-events:none}.corner-flower{width:15px;height:15px;color:var(--rose-deep)}
+.scene{min-height:100svh;min-height:100dvh;position:relative;isolation:isolate;overflow:clip;display:grid;place-items:center;padding:78px 22px 74px;scroll-snap-align:start}.scene-inner{width:min(100%,850px);position:relative;z-index:3;text-align:center;margin-inline:auto}.eyebrow{color:var(--rose-deep);text-transform:uppercase;font-size:10px;letter-spacing:.23em;line-height:1.8;font-weight:650}.small-rule{width:45px;height:1px;background:var(--gold);margin:20px auto}.serif{font-family:var(--serif);font-weight:400;letter-spacing:-.045em}.ornament{display:flex;justify-content:center;align-items:center;gap:9px;color:var(--gold);margin:0 auto 18px}.ornament:before,.ornament:after{content:"";height:1px;width:35px;background:currentColor;opacity:.55}.ornament span{font-size:13px}.scene-kicker{margin:0 auto 13px;font-size:11px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}.scroll-cue{position:absolute;z-index:4;bottom:max(23px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;border:0;background:transparent;color:#41363fac;font-size:10px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;white-space:nowrap;padding:12px 14px}.scroll-cue .arrow{display:inline-block;font-size:17px;animation:nudge 1.8s ease-in-out infinite}.scene-number{position:absolute;z-index:2;bottom:27px;right:23px;color:#47394359;font-family:var(--serif);font-size:12px;letter-spacing:.12em}
+.botanical{position:absolute;z-index:1;width:clamp(100px,24vw,230px);height:auto;opacity:.72;pointer-events:none;filter:saturate(.85)}.botanical--left{left:-28px;top:11%;transform:rotate(-13deg);animation:float-botanical 8s ease-in-out infinite}.botanical--right{right:-23px;bottom:7%;transform:rotate(166deg) scale(.88);animation:float-botanical 9s ease-in-out -2s infinite}.botanical--small{width:clamp(70px,15vw,135px);opacity:.48}.petal-field,.cap-field{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none}.petal{position:absolute;display:block;width:9px;height:14px;border-radius:100% 0 100% 0;background:var(--petal-color,#e8bdc7);opacity:.66;left:var(--x);top:-8%;animation:petal-drift var(--duration,15s) linear var(--delay,0s) infinite;transform:rotate(var(--rotation,0deg))}.petal:nth-child(3n){width:6px;height:10px;opacity:.52}.petal:nth-child(4n){border-radius:50%;width:5px;height:5px}.floating-cap{position:absolute;left:var(--x);top:-12%;font-size:clamp(18px,4vw,30px);opacity:.42;filter:saturate(.65);animation:cap-drift var(--duration,13s) linear var(--delay,0s) infinite;transform:rotate(var(--rotation,0deg))}
+.scene--opening{background:radial-gradient(ellipse at 50% 40%,#ffffffeB 0%,#fffaf6e0 35%,#f9ebebbf 100%),var(--paper)}.opening-frame{position:absolute;z-index:2;inset:15px;border:1px solid #b98b9047;border-radius:200px 200px 22px 22px;pointer-events:none}.opening-frame:before,.opening-frame:after{content:"✳";position:absolute;left:50%;transform:translateX(-50%);color:var(--gold);background:var(--paper);padding:0 9px;font-size:15px}.opening-frame:before{top:-9px}.opening-frame:after{bottom:-10px}.opening-monogram{display:grid;place-items:center;width:46px;height:46px;border:1px solid #c8a66ab3;border-radius:50%;color:var(--green);margin:0 auto 26px;background:#ffffff94;box-shadow:0 0 0 5px #ffffff47}.opening-monogram svg{width:23px;height:23px}.opening-title{font-size:clamp(39px,10vw,77px);line-height:.98;max-width:680px;margin:0 auto;color:#423641}.opening-title em{display:block;font-weight:400;color:var(--rose-deep)}.opening-subtitle{color:var(--muted);font-size:13px;line-height:1.8;max-width:300px;margin:22px auto 28px}.audience-chip{display:inline-block;max-width:88%;margin:0 auto 31px;border:1px solid #b66e833d;border-radius:999px;padding:9px 13px;color:#776170;background:#ffffff73;font-size:9px;line-height:1.7;letter-spacing:.08em;text-transform:uppercase}.open-button{position:relative;display:grid;place-items:center;width:142px;height:142px;margin:0 auto;border-radius:50%;border:1px solid #b66e83b0;color:#fffaf7;background:radial-gradient(circle at 35% 25%,#d9a8b7 0%,#be8093 63%,#ad7086 100%);cursor:pointer;box-shadow:0 9px 25px #9c5f772b,inset 0 0 0 5px #ffffff21;transition:transform .4s var(--ease),box-shadow .4s ease,filter .4s ease;-webkit-tap-highlight-color:transparent}.open-button:before{content:"";position:absolute;inset:-9px;border:1px solid #b66e8359;border-radius:50%;animation:pulse-ring 2.8s ease-out infinite}.open-button:hover{transform:translateY(-3px) scale(1.025);box-shadow:0 14px 34px #9c5f773d,inset 0 0 0 5px #ffffff26}.open-button:active{transform:scale(.97)}.open-button:disabled{cursor:progress}.button-content{display:flex;flex-direction:column;align-items:center;gap:6px}.open-button svg{width:28px;height:28px;margin-bottom:2px}.button-label{font-family:var(--serif);font-size:17px;line-height:1.05}.button-small{font-size:8px;opacity:.87;text-transform:uppercase;letter-spacing:.16em}
+.scene--look{background:radial-gradient(ellipse at 50% 47%,#fff9f6 0%,#f9edf0 60%,#f7e9ec 100%)}.scene--look .botanical{opacity:.55}.look-title{font-size:clamp(51px,12vw,105px);line-height:.95;margin:0 auto;color:#403342;max-width:760px}.look-title em{display:block;margin-top:.1em;color:var(--rose-deep)}.look-copy{margin:25px auto 0;max-width:330px;color:#756572;font-size:14px;line-height:1.85}.tiny-stars{margin:30px auto 0;display:flex;justify-content:center;gap:15px;color:var(--gold);font-size:17px}.tiny-stars span:nth-child(2){font-size:24px;margin-top:-5px}
+.scene--graduate{background:radial-gradient(ellipse at 50% 50%,#fffbf0 0%,#f8f1e3 60%,#f5ead8 100%)}.laurel{position:absolute;z-index:1;width:min(78vw,520px);height:auto;left:50%;top:50%;transform:translate(-50%,-48%);opacity:.2;pointer-events:none}.graduation-cap-mark{width:clamp(82px,20vw,122px);height:auto;color:var(--green);margin:0 auto 22px;display:block;filter:drop-shadow(0 9px 8px #424a3a1f);animation:cap-bob 3.3s ease-in-out infinite}.graduate-title{margin:0 auto;font-size:clamp(46px,12.3vw,105px);line-height:.93;text-transform:uppercase;color:#3d463b;max-width:900px}.you-did-it{display:block;font-size:.58em;letter-spacing:.07em;color:var(--rose-deep);margin-bottom:.25em}.dash-line{display:block;color:var(--gold);font-family:var(--sans);font-weight:300;font-size:.48em;letter-spacing:.18em;margin:.26em 0}.grad-word{display:block;letter-spacing:-.04em}.graduate-copy{color:#716e5d;max-width:330px;margin:26px auto 0;font-size:13px;line-height:1.9}.celebration-seal{display:grid;place-items:center;position:absolute;width:69px;height:69px;right:7%;top:17%;border:1px solid #c8a66ab3;color:#9b804e;background:#ffffff70;border-radius:50%;transform:rotate(12deg);font-family:var(--serif);font-size:10px;line-height:1.3;letter-spacing:.08em}
+.scene--dua{background:radial-gradient(ellipse at 50% 45%,#fffaf7 0%,#f3eee9 70%,#e9eee5 130%)}.dua-card{position:relative;max-width:670px;margin:0 auto;padding:clamp(28px,7vw,55px) clamp(20px,6vw,58px);border:1px solid #c8a66a87;background:#ffffff70;box-shadow:0 20px 60px #5242490b;border-radius:180px 180px 18px 18px}.dua-card:before{content:"✧";position:absolute;left:50%;top:-12px;transform:translateX(-50%);color:var(--gold);background:#fffaf7;padding:0 14px;font-size:21px}.dua-title{margin:0 auto 19px;color:#413a42;font-size:clamp(36px,9vw,63px);line-height:1.02}.dua-text{color:#675d67;font-family:var(--serif);font-size:clamp(17px,4.5vw,22px);line-height:1.72;max-width:510px;margin:0 auto}.ameen{color:var(--rose-deep);font-size:14px;letter-spacing:.16em;text-transform:uppercase;margin:24px 0 0}.signoff-rule{width:44px;height:1px;background:var(--gold);margin:27px auto 18px}.signoff-intro{color:#8a7d86;text-transform:uppercase;font-size:9px;letter-spacing:.2em;margin:0 auto 8px}.signoff-name{color:#3f3641;font-family:var(--serif);font-size:clamp(28px,7vw,40px);line-height:1.1;margin:0}.signoff-title{color:var(--green);font-size:10px;letter-spacing:.17em;text-transform:uppercase;margin:9px 0 0}.end-note{margin:26px auto 0;color:#958995;font-size:10px;letter-spacing:.08em}.replay-button{display:inline-flex;align-items:center;gap:8px;margin:24px auto 0;padding:11px 17px;border:1px solid #b66e836b;color:#7f5b6a;background:#ffffff8c;border-radius:999px;cursor:pointer;font-size:11px;transition:background .25s ease,transform .25s ease}.replay-button:hover{background:#fff;transform:translateY(-2px)}
+.transition-layer{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:20px;background:#faf2eff5;backdrop-filter:blur(12px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .55s ease,visibility .55s}.transition-layer.is-active{opacity:1;visibility:visible;pointer-events:auto}.envelope-wrap{width:min(76vw,310px);aspect-ratio:1.25;position:relative;transform:translateY(18px) scale(.92);opacity:.4;transition:transform .8s var(--ease),opacity .7s ease;filter:drop-shadow(0 17px 22px #774e5921)}.transition-layer.is-active .envelope-wrap{transform:translateY(0) scale(1);opacity:1}.envelope-back{position:absolute;inset:0;border-radius:10px;background:#e9cfd2;border:1px solid #b66e834d}.envelope-letter{position:absolute;left:9%;right:9%;bottom:5%;height:78%;background:#fffaf4;border:1px solid #c8a66a6b;border-radius:4px;display:grid;place-items:center;text-align:center;padding:12px;color:var(--rose-deep);font-family:var(--serif);font-size:clamp(20px,5vw,27px);line-height:1.1;transition:transform .85s var(--ease)}.envelope-wrap.is-open .envelope-letter{transform:translateY(-39%)}.envelope-pocket{position:absolute;inset:0;background:linear-gradient(135deg,#eddae0,#d8acb8);clip-path:polygon(0 0,50% 57%,100% 0,100% 100%,0 100%);border-radius:0 0 10px 10px}.envelope-flap{position:absolute;left:0;right:0;top:0;height:62%;background:linear-gradient(155deg,#f5e6e5,#d5a3b1);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:50% 0;transform:rotateX(0);transition:transform .7s var(--ease);backface-visibility:hidden;z-index:3}.envelope-wrap.is-open .envelope-flap{transform:rotateX(180deg)}.envelope-stamp{position:absolute;z-index:4;left:50%;top:48%;width:43px;height:43px;transform:translate(-50%,-50%);border:1px solid #ffffffad;border-radius:50%;background:var(--rose-deep);color:#fff8f4;display:grid;place-items:center;font-size:19px;transition:opacity .25s}.envelope-wrap.is-open .envelope-stamp{opacity:0}.transition-caption{position:absolute;bottom:16%;left:20px;right:20px;text-align:center;color:#7d6975;text-transform:uppercase;font-size:10px;letter-spacing:.23em}
+[data-reveal]{opacity:0;transform:translateY(23px);transition:opacity .9s ease,transform .9s var(--ease)}[data-reveal].is-visible{opacity:1;transform:translateY(0)}[data-reveal="delayed"].is-visible{transition-delay:.18s}[data-reveal="later"].is-visible{transition-delay:.35s}.scene--look .look-title.is-visible em{animation:reveal-word .8s .18s var(--ease) both}
+@keyframes pulse-ring{0%{transform:scale(.96);opacity:.72}80%,100%{transform:scale(1.14);opacity:0}}@keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}@keyframes petal-drift{0%{transform:translate3d(0,-8vh,0) rotate(var(--rotation,0deg))}100%{transform:translate3d(var(--drift,30px),112vh,0) rotate(calc(var(--rotation,0deg) + 300deg))}}@keyframes cap-drift{0%{transform:translate3d(0,-12vh,0) rotate(var(--rotation,0deg))}100%{transform:translate3d(var(--drift,30px),115vh,0) rotate(calc(var(--rotation,0deg) + 35deg))}}@keyframes float-botanical{0%,100%{translate:0 0}50%{translate:0 -12px}}@keyframes cap-bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-9px) rotate(2deg)}}@keyframes reveal-word{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+@media(min-width:760px){.scene{padding:80px 48px 76px}.corner-note{left:28px}.opening-frame{inset:25px;border-radius:250px 250px 28px 28px}.opening-subtitle{max-width:410px;font-size:14px}.audience-chip{font-size:10px}.open-button{width:158px;height:158px}.scroll-cue{bottom:25px}.botanical--left{left:4%;top:12%}.botanical--right{right:4%;bottom:7%}.celebration-seal{right:13%;top:18%;width:83px;height:83px;font-size:11px}}
+@media(max-height:690px) and (max-width:759px){.scene{padding-top:62px;padding-bottom:57px}.opening-monogram{margin-bottom:16px;width:39px;height:39px}.opening-title{font-size:clamp(35px,8.4vw,54px)}.opening-subtitle{margin:14px auto 17px;font-size:12px}.audience-chip{margin-bottom:18px}.open-button{width:120px;height:120px}.open-button svg{width:23px;height:23px}.button-label{font-size:15px}.dua-card{padding-top:36px;padding-bottom:26px}.dua-text{font-size:16px}.ameen{margin-top:15px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}html{scroll-behavior:auto}.petal-field,.cap-field{display:none}[data-reveal]{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="progress-track" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
+<div class="corner-note" aria-hidden="true"><svg class="corner-flower" viewBox="0 0 40 40" fill="none"><g stroke="currentColor" stroke-width="1.4"><ellipse cx="20" cy="11" rx="4.4" ry="7"/><ellipse cx="20" cy="29" rx="4.4" ry="7"/><ellipse cx="11" cy="20" rx="7" ry="4.4"/><ellipse cx="29" cy="20" rx="7" ry="4.4"/><ellipse cx="13.7" cy="13.7" rx="4.4" ry="7" transform="rotate(-45 13.7 13.7)"/><ellipse cx="26.3" cy="26.3" rx="4.4" ry="7" transform="rotate(-45 26.3 26.3)"/><ellipse cx="26.3" cy="13.7" rx="4.4" ry="7" transform="rotate(45 26.3 13.7)"/><ellipse cx="13.7" cy="26.3" rx="4.4" ry="7" transform="rotate(45 13.7 26.3)"/><circle cx="20" cy="20" r="2.7"/></g></svg>a little graduation story</div>
+<main id="experience">
+<section class="scene scene--opening" id="welcome" aria-labelledby="openingTitle">
+<div class="opening-frame" aria-hidden="true"></div><div class="petal-field" data-petals="24" aria-hidden="true"></div>
+<svg class="botanical botanical--left" viewBox="0 0 180 250" fill="none" aria-hidden="true"><g stroke="#829a7f" stroke-width="1.5" stroke-linecap="round"><path d="M8 243C44 192 64 145 91 75C99 54 111 27 125 8"/><path d="M47 178C20 174 11 155 10 137C32 136 49 147 47 178Z" fill="#a9bea1" fill-opacity=".45"/><path d="M69 126C45 121 36 101 39 83C59 84 73 101 69 126Z" fill="#a9bea1" fill-opacity=".45"/><path d="M88 82C67 73 64 55 72 39C91 46 98 62 88 82Z" fill="#a9bea1" fill-opacity=".45"/></g><g fill="#e7b9c2" stroke="#d59caa"><ellipse cx="127" cy="24" rx="7" ry="15"/><ellipse cx="143" cy="31" rx="7" ry="15"/><ellipse cx="143" cy="48" rx="7" ry="15"/><ellipse cx="125" cy="50" rx="7" ry="15"/><ellipse cx="116" cy="34" rx="7" ry="15"/><circle cx="131" cy="37" r="5" fill="#d3ad67" stroke="none"/></g></svg>
+<svg class="botanical botanical--right" viewBox="0 0 180 250" fill="none" aria-hidden="true"><g stroke="#829a7f" stroke-width="1.5" stroke-linecap="round"><path d="M8 243C44 192 64 145 91 75C99 54 111 27 125 8"/><path d="M47 178C20 174 11 155 10 137C32 136 49 147 47 178Z" fill="#a9bea1" fill-opacity=".45"/><path d="M69 126C45 121 36 101 39 83C59 84 73 101 69 126Z" fill="#a9bea1" fill-opacity=".45"/></g><g fill="#c7b7db" stroke="#ab99c4"><ellipse cx="127" cy="24" rx="7" ry="15"/><ellipse cx="143" cy="31" rx="7" ry="15"/><ellipse cx="143" cy="48" rx="7" ry="15"/><ellipse cx="125" cy="50" rx="7" ry="15"/><ellipse cx="116" cy="34" rx="7" ry="15"/><circle cx="131" cy="37" r="5" fill="#d3ad67" stroke="none"/></g></svg>
+<div class="scene-inner"><div class="opening-monogram" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 4v24M4 16h24M7.5 7.5l17 17m0-17-17 17" stroke="currentColor" stroke-width="1.2"/><circle cx="16" cy="16" r="5.5" stroke="currentColor" stroke-width="1.2"/><circle cx="16" cy="16" r="1.4" fill="#c8a66a"/></svg></div><p class="eyebrow" data-reveal>For a moment worth remembering</p><h1 class="opening-title serif" id="openingTitle" data-reveal="delayed">A little note <em>for your big moment.</em></h1><p class="opening-subtitle" data-reveal="later">A tiny surprise to celebrate how far you've come — and all the beautiful things still ahead.</p><div class="audience-chip" data-reveal="later">Final-year students · Department of Islamic Learning<br>University of Karachi</div>
+<button class="open-button" id="openSurprise" type="button" aria-label="Open your graduation surprise"><span class="button-content"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M5 11.5 16 4l11 7.5v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-13Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="m5.5 12 10.5 8 10.5-8M5.5 26l8-8m13 8-8-8" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg><span class="button-label">Open your<br>surprise</span><span class="button-small">tap to begin</span></span></button></div><span class="scene-number">01 / 04</span>
+</section>
+<section class="scene scene--look" id="look" aria-labelledby="lookTitle"><div class="petal-field" data-petals="28" aria-hidden="true"></div>
+<svg class="botanical botanical--left botanical--small" viewBox="0 0 180 250" fill="none" aria-hidden="true"><g stroke="#829a7f" stroke-width="1.5"><path d="M8 243C44 192 64 145 91 75"/><path d="M47 178C20 174 11 155 10 137C32 136 49 147 47 178Z" fill="#a9bea1" fill-opacity=".45"/><path d="M69 126C45 121 36 101 39 83C59 84 73 101 69 126Z" fill="#a9bea1" fill-opacity=".45"/></g></svg><svg class="botanical botanical--right botanical--small" viewBox="0 0 180 250" fill="none" aria-hidden="true"><g stroke="#829a7f" stroke-width="1.5"><path d="M8 243C44 192 64 145 91 75"/><path d="M47 178C20 174 11 155 10 137C32 136 49 147 47 178Z" fill="#a9bea1" fill-opacity=".45"/></g></svg>
+<div class="scene-inner"><div class="ornament" data-reveal><span>✧</span></div><p class="scene-kicker" data-reveal="delayed">Pause for a second…</p><h2 class="look-title serif" id="lookTitle" data-reveal>Look what <em>you've done!</em></h2><p class="look-copy" data-reveal="later">Every late night, every lesson, every little step brought you here. Take it all in — you have so much to be proud of.</p><div class="tiny-stars" aria-hidden="true" data-reveal="later"><span>✧</span><span>✳</span><span>✧</span></div></div><button class="scroll-cue" type="button" data-next="graduate" aria-label="Continue to the graduation reveal">there's more <span class="arrow">↓</span></button><span class="scene-number">02 / 04</span></section>
+<section class="scene scene--graduate" id="graduate" aria-labelledby="graduateTitle"><div class="cap-field" data-caps="10" aria-hidden="true"></div><svg class="laurel" viewBox="0 0 500 470" fill="none" aria-hidden="true"><g stroke="#82936c" stroke-width="2.2"><path d="M247 423C124 393 62 287 91 164C105 107 145 65 190 39"/><path d="M253 423C376 393 438 287 409 164C395 107 355 65 310 39"/></g><g fill="#93a786" fill-opacity=".43" stroke="#82936c" stroke-width="1.3"><ellipse cx="104" cy="331" rx="13" ry="37" transform="rotate(-44 104 331)"/><ellipse cx="84" cy="281" rx="13" ry="37" transform="rotate(-27 84 281)"/><ellipse cx="77" cy="229" rx="13" ry="37" transform="rotate(-7 77 229)"/><ellipse cx="88" cy="180" rx="13" ry="37" transform="rotate(18 88 180)"/><ellipse cx="111" cy="135" rx="13" ry="37" transform="rotate(39 111 135)"/><ellipse cx="396" cy="331" rx="13" ry="37" transform="rotate(44 396 331)"/><ellipse cx="416" cy="281" rx="13" ry="37" transform="rotate(27 416 281)"/><ellipse cx="423" cy="229" rx="13" ry="37" transform="rotate(7 423 229)"/><ellipse cx="412" cy="180" rx="13" ry="37" transform="rotate(-18 412 180)"/></g></svg><div class="celebration-seal" aria-hidden="true">A NEW<br>CHAPTER<br>✧</div><div class="scene-inner"><svg class="graduation-cap-mark" viewBox="0 0 100 78" fill="none" aria-hidden="true"><path d="M5 25 50 5l45 20-45 21L5 25Z" fill="#526d5a" stroke="#3f5947" stroke-width="1.5"/><path d="M22 34v19c16 13 40 13 56 0V34L50 47 22 34Z" fill="#758c72" stroke="#3f5947" stroke-width="1.5"/><path d="M93 26v27" stroke="#c8a66a" stroke-width="2.2"/><circle cx="93" cy="55" r="3.2" fill="#c8a66a"/></svg><p class="eyebrow" data-reveal>All those steps led to this</p><h2 class="graduate-title serif" id="graduateTitle" data-reveal="delayed"><span class="you-did-it">You did it</span><span class="dash-line">—</span><span class="grad-word">Graduation!</span></h2><p class="graduate-copy" data-reveal="later">A chapter to remember. A future to look forward to. And so many reasons to celebrate you.</p></div><button class="scroll-cue" type="button" data-next="dua" aria-label="Continue to a heartfelt prayer">one last thing <span class="arrow">↓</span></button><span class="scene-number">03 / 04</span></section>
+<section class="scene scene--dua" id="dua" aria-labelledby="duaTitle"><div class="petal-field" data-petals="20" aria-hidden="true"></div><svg class="botanical botanical--left botanical--small" viewBox="0 0 180 250" fill="none" aria-hidden="true"><g stroke="#829a7f" stroke-width="1.5"><path d="M8 243C44 192 64 145 91 75"/><path d="M47 178C20 174 11 155 10 137C32 136 49 147 47 178Z" fill="#a9bea1" fill-opacity=".45"/></g></svg><svg class="botanical botanical--right botanical--small" viewBox="0 0 180 250" fill="none" aria-hidden="true"><g stroke="#829a7f" stroke-width="1.5"><path d="M8 243C44 192 64 145 91 75"/><path d="M69 126C45 121 36 101 39 83C59 84 73 101 69 126Z" fill="#a9bea1" fill-opacity=".45"/></g></svg><div class="scene-inner"><div class="dua-card" data-reveal><div class="ornament"><span>❋</span></div><p class="scene-kicker">A prayer for your next chapter</p><h2 class="dua-title serif" id="duaTitle">May your future<br>be full of barakah.</h2><p class="dua-text">May ALLAH always keep you happy, bless you with success at every step, place barakah in your knowledge and efforts, and open beautiful doors for your future. May what you have learned become a source of goodness for you and humanity. Ameen.</p><p class="ameen">Ameen, ya Rabb</p><div class="signoff-rule"></div><p class="signoff-intro">With heartfelt wishes</p><p class="signoff-name">Shaikh Tahami</p><p class="end-note">A little celebration, made with care. ✧</p></div><button class="replay-button" id="replayButton" type="button"><span aria-hidden="true">↺</span> Experience it again</button></div><span class="scene-number">04 / 04</span></section>
+</main>
+<div class="transition-layer" id="transitionLayer" aria-hidden="true"><div class="cap-field" data-caps="18" aria-hidden="true"></div><div class="envelope-wrap" id="envelopeWrap" aria-hidden="true"><div class="envelope-back"></div><div class="envelope-letter">A little<br>celebration<br><span style="font-size:.55em;letter-spacing:.15em;text-transform:uppercase">just for you</span></div><div class="envelope-pocket"></div><div class="envelope-flap"></div><div class="envelope-stamp">✧</div></div><p class="transition-caption">opening a little surprise</p></div>
+<script>
+(() => {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const progressBar = document.getElementById('progressBar');
+  const openButton = document.getElementById('openSurprise');
+  const transitionLayer = document.getElementById('transitionLayer');
+  const envelopeWrap = document.getElementById('envelopeWrap');
+  const replayButton = document.getElementById('replayButton');
+  const root = document.documentElement;
+  const laterScenes = [...document.querySelectorAll('.scene:not(#welcome)')];
+  let hasOpened = false;
+  let transitionTimers = [];
+
+  // This lock is active on initial page load. Later scenes are also removed from tab navigation.
+  laterScenes.forEach(scene => {
+    scene.setAttribute('inert', '');
+    scene.setAttribute('aria-hidden', 'true');
+  });
+  function unlockJourney() {
+    root.classList.remove('journey-locked');
+    laterScenes.forEach(scene => {
+      scene.removeAttribute('inert');
+      scene.removeAttribute('aria-hidden');
+    });
+  }
+  function blockScrollingBeforeOpening(event) {
+    if (root.classList.contains('journey-locked')) event.preventDefault();
+  }
+  window.addEventListener('wheel', blockScrollingBeforeOpening, { passive: false, capture: true });
+  window.addEventListener('touchmove', blockScrollingBeforeOpening, { passive: false, capture: true });
+  window.addEventListener('keydown', event => {
+    if (!root.classList.contains('journey-locked')) return;
+    const scrollKeys = ['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End'];
+    const isSpace = event.code === 'Space' || event.key === ' ';
+    const targetIsControl = event.target instanceof Element && event.target.closest('button, a, input, textarea, select, [role="button"]');
+    if (scrollKeys.includes(event.key) || (isSpace && !targetIsControl)) event.preventDefault();
+  }, { capture: true });
+
+  function seedParticles(container, count, type) {
+    if (!container || container.dataset.seeded === 'true') return;
+    container.dataset.seeded = 'true';
+    const colours = ['#e7b9c2', '#d8c8e5', '#c9d9c4', '#ead7a9', '#e9c8d5'];
+    for (let i = 0; i < count; i++) {
+      const item = document.createElement('span');
+      if (type === 'petals') {
+        item.className = 'petal';
+        item.style.setProperty('--petal-color', colours[i % colours.length]);
+      } else {
+        item.className = 'floating-cap';
+        item.textContent = '🎓';
+        item.setAttribute('aria-hidden', 'true');
+      }
+      item.style.setProperty('--x', `${(i * 37 + 9) % 100}%`);
+      item.style.setProperty('--duration', `${11 + (i % 8) * 1.7}s`);
+      item.style.setProperty('--delay', `${-((i * 1.37) % 22)}s`);
+      item.style.setProperty('--rotation', `${(i * 43) % 180}deg`);
+      item.style.setProperty('--drift', `${(i % 2 ? 1 : -1) * (18 + (i % 5) * 11)}px`);
+      container.appendChild(item);
+    }
+  }
+  document.querySelectorAll('[data-petals]').forEach(el => seedParticles(el, Number(el.dataset.petals || 18), 'petals'));
+  document.querySelectorAll('[data-caps]').forEach(el => seedParticles(el, Number(el.dataset.caps || 10), 'caps'));
+
+  function clearTransitionTimers() { transitionTimers.forEach(clearTimeout); transitionTimers = []; }
+  function scrollToScene(id) {
+    const target = document.getElementById(id);
+    if (target) target.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
+  }
+  function openSurprise() {
+    if (hasOpened) { scrollToScene('look'); return; }
+    hasOpened = true;
+    openButton.disabled = true;
+    transitionLayer.setAttribute('aria-hidden', 'false');
+    transitionLayer.classList.add('is-active');
+    requestAnimationFrame(() => requestAnimationFrame(() => envelopeWrap.classList.add('is-open')));
+    const waitForEnvelope = reducedMotion ? 180 : 1550;
+    transitionTimers.push(setTimeout(() => {
+      // Scrolling is unlocked only after a real button activation and the envelope reveal.
+      unlockJourney();
+      requestAnimationFrame(() => scrollToScene('look'));
+      transitionLayer.classList.remove('is-active');
+      transitionTimers.push(setTimeout(() => {
+        transitionLayer.setAttribute('aria-hidden', 'true');
+        envelopeWrap.classList.remove('is-open');
+        openButton.disabled = false;
+      }, reducedMotion ? 30 : 620));
+    }, waitForEnvelope));
+  }
+  openButton.addEventListener('click', openSurprise);
+  document.querySelectorAll('[data-next]').forEach(button => button.addEventListener('click', () => scrollToScene(button.dataset.next)));
+  replayButton.addEventListener('click', () => {
+    clearTransitionTimers();
+    hasOpened = false;
+    openButton.disabled = false;
+    transitionLayer.classList.remove('is-active');
+    transitionLayer.setAttribute('aria-hidden', 'true');
+    envelopeWrap.classList.remove('is-open');
+    root.classList.add('journey-locked');
+    laterScenes.forEach(scene => { scene.setAttribute('inert', ''); scene.setAttribute('aria-hidden', 'true'); });
+    window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
+  });
+
+  const revealTargets = document.querySelectorAll('[data-reveal], .dua-card');
+  if ('IntersectionObserver' in window && !reducedMotion) {
+    const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('is-visible'); revealObserver.unobserve(entry.target); }
+    }), { threshold: 0.15, rootMargin: '0px 0px -5% 0px' });
+    revealTargets.forEach(el => revealObserver.observe(el));
+  } else revealTargets.forEach(el => el.classList.add('is-visible'));
+
+  let ticking = false;
+  function updateProgress() {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = `${scrollable > 0 ? Math.max(0, Math.min(100, (window.scrollY / scrollable) * 100)) : 0}%`;
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(updateProgress); ticking = true; } }, { passive: true });
+  window.addEventListener('resize', updateProgress, { passive: true });
+  updateProgress();
+})();
+</script>
+</body>
+</html>
